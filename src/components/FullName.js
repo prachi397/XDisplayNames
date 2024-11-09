@@ -39,7 +39,7 @@ const FullName = () => {
       </form>
       {isButtonClicked && (
         <div>
-          <p>Full Name : {fullName}</p>
+          <p>Full Name: {fullName}</p>
         </div>
       )}
     </div>
