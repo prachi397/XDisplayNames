@@ -9,8 +9,7 @@ const FullName = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsButtonClicked(true);
-    const validName = /^[A-Za-z\s]+$/
-    if(firstName && lastName && validName.test(firstName) && validName.test(lastName)){
+    if(firstName && lastName){
         setFullName(`${firstName} ${lastName}`);
     }else{
         setFullName('');
