@@ -35,7 +35,7 @@ const FullName = () => {
             required
           />
         </div>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
       {isButtonClicked && (
         <div>
