@@ -9,8 +9,12 @@ const FullName = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsButtonClicked(true);
-    const completeName = `${firstName} ${lastName}`;
-    setFullName(completeName);
+    const validName = /^[A-Za-z\s]+$/
+    if(firstName && lastName && validName.test(firstName) && validName.test(lastName)){
+        setFullName(`${firstName} ${lastName}`);
+    }else{
+        setFullName('');
+    }
   };
 
   return (
@@ -37,7 +41,7 @@ const FullName = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
-      {isButtonClicked && (
+      {isButtonClicked && fullName &&(
         <div>
           <p>Full Name: {fullName}</p>
         </div>
